@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+
+  <body>
+    <main class="enterprise-app">
+  <header class="app-header">
+    <div class="brand">
+      <div class="status-dot"></div>
+      <h1>SOS Voice Protocol</h1>
+    </div>
+    <span class="badge">Nivel de Producción</span>
+  </header>
+
+  <section class="dashboard-grid">
+    <article id="status-panel" class="panel visual-panel" aria-live="polite">
+      <div class="aurora-bg"></div>
+      <div class="mic-container">
+        <div id="mic-icon" class="mic-icon">🎤</div>
+      </div>
+      <h2 id="system-status">Standby</h2>
+      <p id="system-subtext">Sistema seguro y encriptado</p>
+    </article>
+
+    <article class="panel command-panel">
+      <h3 class="panel-title">Comandos Autorizados</h3>
+      <table class="cmd-table">
+        <thead>
+          <tr>
+            <th>Comando (Clic para usar)</th>
+            <th>Acción del Sistema</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><kbd>"Emergencia"</kbd></td>
+            <td>Activa Protocolo Alpha.</td>
+          </tr>
+          <tr>
+            <td><kbd>"Ayuda"</kbd></td>
+            <td>Solicita asistencia técnica.</td>
+          </tr>
+          <tr>
+            <td><kbd>"Llamar"</kbd></td>
+            <td>Conexión con mando (911).</td>
+          </tr>
+          <tr>
+            <td><kbd>"Ubicación"</kbd></td>
+            <td>Emite coordenadas.</td>
+          </tr>
+          <tr>
+            <td><kbd>"Cancelar"</kbd></td>
+            <td>Aborta protocolos.</td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+
+    <article class="panel console-panel">
+      <div id="chat-log" class="chat-scroll-area">
+        <div class="log-entry system-log">
+          <span class="timestamp" id="init-time"></span>
+          <span class="message">Sistema inicializado. Esperando instrucciones.</span>
+        </div>
+      </div>
+      
+      <div class="input-controls">
+        <input type="text" id="command-input" placeholder="Comando manual..." autocomplete="off">
+        <button id="send-btn" class="btn btn-secondary">Enviar</button>
+      </div>
+    </article>
+  </section>
+
+  <footer class="app-footer">
+    <button id="master-btn" class="btn btn-primary btn-large">
+      <span class="btn-text">Activar Monitoreo de Voz</span>
+    </button>
+  </footer>
+</main>
+    <script src="/script.js"></script>
+  </body>
+
+</html>
