@@ -1,88 +1,340 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
     <meta charset="UTF-8">
-    <title>Untitled</title>
+    <title>Taquería POS</title>
     <link rel="stylesheet" href="/style.css">
   </head>
-
   <body>
-    <main class="enterprise-app">
-  <header class="app-header">
+<div class="pos-app">
+  <!-- Top Header -->
+  <header class="top-header">
     <div class="brand">
-      <div class="status-dot"></div>
-      <h1>SOS Voice Protocol</h1>
+      <div class="logo">🌮</div>
+      <div class="title-wrap">
+        <h1>Taquería POS <span class="status-dot"></span></h1>
+        <span class="subtitle">Comanda</span>
+      </div>
     </div>
-    <span class="badge">Nivel de Producción</span>
+    <div class="header-actions">
+      <button class="btn-outline table-btn">
+        <span class="icon">🪑</span> Mesa 4 • Llevar
+      </button>
+      <div class="user-avatar">
+        <span class="icon">👤</span>
+      </div>
+    </div>
   </header>
 
-  <section class="dashboard-grid">
-    <article id="status-panel" class="panel visual-panel" aria-live="polite">
-      <div class="aurora-bg"></div>
-      <div class="mic-container">
-        <div id="mic-icon" class="mic-icon">🎤</div>
-      </div>
-      <h2 id="system-status">Standby</h2>
-      <p id="system-subtext">Sistema seguro y encriptado</p>
-    </article>
+  <!-- Top Controls -->
+  <div class="top-controls">
+    <button class="btn-mesa active">
+      <span class="icon">🪑</span> Mesa 4
+    </button>
+    <div class="people-counter">
+      <button class="counter-btn">-</button>
+      <span class="count"><span class="icon">👥</span> 3</span>
+      <button class="counter-btn">+</button>
+    </div>
+    <button class="btn-nueva">
+      <span class="icon">⊕</span> Nueva
+    </button>
+  </div>
 
-    <article class="panel command-panel">
-      <h3 class="panel-title">Comandos Autorizados</h3>
-      <table class="cmd-table">
-        <thead>
-          <tr>
-            <th>Comando (Clic para usar)</th>
-            <th>Acción del Sistema</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><kbd>"Emergencia"</kbd></td>
-            <td>Activa Protocolo Alpha.</td>
-          </tr>
-          <tr>
-            <td><kbd>"Ayuda"</kbd></td>
-            <td>Solicita asistencia técnica.</td>
-          </tr>
-          <tr>
-            <td><kbd>"Llamar"</kbd></td>
-            <td>Conexión con mando (911).</td>
-          </tr>
-          <tr>
-            <td><kbd>"Ubicación"</kbd></td>
-            <td>Emite coordenadas.</td>
-          </tr>
-          <tr>
-            <td><kbd>"Cancelar"</kbd></td>
-            <td>Aborta protocolos.</td>
-          </tr>
-        </tbody>
-      </table>
-    </article>
+  <!-- Categories Scroll -->
+  <div class="categories-scroll">
+    <button class="category-btn active">
+      <span class="icon">🌮</span> Tacos 5x$60
+    </button>
+    <button class="category-btn">
+      <span class="icon">🧀</span> Queso Carnes $45
+    </button>
+    <button class="category-btn">
+      <span class="icon">🥖</span> Tortas
+    </button>
+  </div>
 
-    <article class="panel console-panel">
-      <div id="chat-log" class="chat-scroll-area">
-        <div class="log-entry system-log">
-          <span class="timestamp" id="init-time"></span>
-          <span class="message">Sistema inicializado. Esperando instrucciones.</span>
+  <!-- Main Scrollable Content -->
+  <main class="main-content">
+
+    <!-- Section: Orden de 5 Tacos -->
+    <section class="menu-section">
+      <div class="section-header">
+        <h2>Arma tu Orden de 5 Tacos</h2>
+        <div class="section-badges">
+          <span class="badge-price">$60 total</span>
+          <span class="badge-success">✓ 5/5 tacos</span>
         </div>
       </div>
-      
-      <div class="input-controls">
-        <input type="text" id="command-input" placeholder="Comando manual..." autocomplete="off">
-        <button id="send-btn" class="btn btn-secondary">Enviar</button>
-      </div>
-    </article>
-  </section>
 
-  <footer class="app-footer">
-    <button id="master-btn" class="btn btn-primary btn-large">
-      <span class="btn-text">Activar Monitoreo de Voz</span>
+      <div class="combo-card">
+        <div class="combo-image" style="background-image: url('https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?auto=format&fit=crop&w=800&q=80');">
+          <div class="combo-overlay">
+            <div class="combo-info">
+              <h3>5 Tacos con Todo</h3>
+              <p>Cebollita, cilantro y salsa asada</p>
+            </div>
+            <div class="combo-price">$60.00</div>
+          </div>
+        </div>
+
+        <div class="options-list">
+          <!-- Item 1 -->
+          <div class="option-item">
+            <div class="option-info">
+              <h4>Suadero Confitado</h4>
+              <p>Pique suave dorado</p>
+            </div>
+            <div class="quantity-control">
+              <button class="qty-btn">-</button>
+              <span class="qty-value active">2</span>
+              <button class="qty-btn">+</button>
+            </div>
+          </div>
+          <!-- Item 2 -->
+          <div class="option-item">
+            <div class="option-info">
+              <h4>Campechano</h4>
+              <p>Suadero y Longaniza frita</p>
+            </div>
+            <div class="quantity-control">
+              <button class="qty-btn">-</button>
+              <span class="qty-value active">2</span>
+              <button class="qty-btn">+</button>
+            </div>
+          </div>
+          <!-- Item 3 -->
+          <div class="option-item">
+            <div class="option-info">
+              <h4>Tipo Pastor con Piña</h4>
+              <p>Adobo artesanal de achiote</p>
+            </div>
+            <div class="quantity-control">
+              <button class="qty-btn">-</button>
+              <span class="qty-value active">1</span>
+              <button class="qty-btn">+</button>
+            </div>
+          </div>
+          <!-- Item 4 -->
+          <div class="option-item">
+            <div class="option-info">
+              <h4>Longaniza Artesanal</h4>
+              <p>Guisada a la plancha</p>
+            </div>
+            <div class="quantity-control">
+              <button class="qty-btn">-</button>
+              <span class="qty-value">0</span>
+              <button class="qty-btn">+</button>
+            </div>
+          </div>
+          <!-- Item 5 -->
+          <div class="option-item">
+            <div class="option-info">
+              <h4>Campechano Rojo</h4>
+              <p>Suadero y Enchilada</p>
+            </div>
+            <div class="quantity-control">
+              <button class="qty-btn">-</button>
+              <span class="qty-value">0</span>
+              <button class="qty-btn">+</button>
+            </div>
+          </div>
+          <!-- Item 6 -->
+          <div class="option-item">
+            <div class="option-info">
+              <h4>Carne Enchilada</h4>
+              <p>Marinada en chiles secos</p>
+            </div>
+            <div class="quantity-control">
+              <button class="qty-btn">-</button>
+              <span class="qty-value">0</span>
+              <button class="qty-btn">+</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-footer">
+          <button class="btn-primary">
+            <span class="icon">✓+</span> Agregar Orden de 5 ($60.00)
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Especialidad -->
+    <section class="menu-section">
+      <div class="section-header">
+        <h2 class="text-orange">Especialidad: Queso Carnes <span class="price-highlight">$45.00 c/u</span></h2>
+      </div>
+
+      <div class="item-card horizontal">
+        <div class="item-image" style="background-image: url('https://images.unsplash.com/photo-1585238341267-1cb9f2a48858?auto=format&fit=crop&w=400&q=80');"></div>
+        <div class="item-content">
+          <h3>Queso Carne Suprema</h3>
+          <p>2 tortillas de harina extendidas con carne a elegir + Queso blanco y...</p>
+          <div class="tags">
+            <span class="tag">Suadero</span>
+            <span class="tag active-tag">Pastor</span>
+            <span class="tag">Longaniza</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="item-actions-row">
+        <div class="quantity-control large">
+          <button class="qty-btn">-</button>
+          <span class="qty-value">1</span>
+          <button class="qty-btn">+</button>
+        </div>
+        <button class="btn-add-orange">
+          <span class="icon">🛒</span> Sumar $45
+        </button>
+      </div>
+    </section>
+
+    <!-- Section: Tortas -->
+    <section class="menu-section">
+      <div class="section-header flex-between">
+        <h2 class="text-dark-red">Tortas a la Plancha</h2>
+        <span class="subtitle">Pan telera recién tostado</span>
+      </div>
+
+      <div class="list-item">
+        <div class="list-item-info">
+          <h3>Torta Sencilla <span class="price">$40</span></h3>
+          <p>Pan telera crujiente + carne de tu elecc...</p>
+          <p class="meta">Carne: <span class="text-red">Suadero / Longaniza</span></p>
+        </div>
+        <button class="btn-add-light">+ $40</button>
+      </div>
+
+      <div class="list-item">
+        <div class="list-item-info">
+          <h3>Torta Con Queso <span class="price">$50</span></h3>
+          <p>Pan telera + carne + costra de queso bl...</p>
+          <p class="meta text-green"><span class="icon">👍</span> ¡La más pedida!</p>
+        </div>
+        <button class="btn-add-dark">+ $50</button>
+      </div>
+    </section>
+
+    <!-- Section: Bebidas Rápidas -->
+    <section class="menu-section">
+      <div class="section-header flex-between">
+        <h2 class="text-dark-red">Bebidas Rápidas</h2>
+        <span class="subtitle">Refresco bien frío</span>
+      </div>
+
+      <div class="drinks-grid">
+        <div class="drink-card">
+          <div class="drink-icon-price">
+            <span class="icon text-red">🥤</span>
+            <span class="price">$25</span>
+          </div>
+          <h4>Coca-Cola 600ml</h4>
+          <p>Vidrio retornable</p>
+        </div>
+        <div class="drink-card">
+          <div class="drink-icon-price">
+            <span class="icon text-blue">☕</span>
+            <span class="price">$25</span>
+          </div>
+          <h4>Pepsi 600ml</h4>
+          <p>Refresco de cola</p>
+        </div>
+        <div class="drink-card">
+          <div class="drink-icon-price">
+            <span class="icon text-green">🍃</span>
+            <span class="price">$25</span>
+          </div>
+          <h4>Manzanita Sol</h4>
+          <p>600ml frío</p>
+        </div>
+        <div class="drink-card">
+          <div class="drink-icon-price">
+            <span class="icon text-green-light">🫧</span>
+            <span class="price">$25</span>
+          </div>
+          <h4>7Up / Mirinda</h4>
+          <p>Cítrico burbujeante</p>
+        </div>
+        <div class="drink-card">
+          <div class="drink-icon-price">
+            <span class="icon text-brown">🥛</span>
+            <span class="price">$20</span>
+          </div>
+          <h4>Agua Horchata</h4>
+          <p>1/2 Litro con canela</p>
+        </div>
+        <div class="drink-card">
+          <div class="drink-icon-price">
+            <span class="icon text-red">💧</span>
+            <span class="price">$20</span>
+          </div>
+          <h4>Agua Jamaica</h4>
+          <p>1/2 Litro fresca</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Jarritos -->
+    <section class="menu-section">
+      <div class="section-header flex-between">
+        <h2 class="text-dark-red"><span class="icon">🍹</span> Jarritos Tradicionales ($20)</h2>
+        <span class="subtitle">Elige sabor:</span>
+      </div>
+      
+      <div class="flavors-grid">
+        <button class="flavor-btn">Tamarindo</button>
+        <button class="flavor-btn">Mandarina</button>
+        <button class="flavor-btn">Piña</button>
+        <button class="flavor-btn">Limón</button>
+        <button class="flavor-btn">Uva</button>
+        <button class="flavor-btn">Tutifruti</button>
+      </div>
+    </section>
+
+    <!-- Spacer for bottom bar -->
+    <div style="height: 80px;"></div>
+  </main>
+
+  <!-- Sticky Bottom Bar -->
+  <div class="bottom-cart-bar">
+    <div class="cart-info">
+      <div class="cart-icon-wrap">
+        <span class="icon">🧾</span>
+        <span class="badge">6</span>
+      </div>
+      <div class="cart-total-info">
+        <span class="label">Orden Actual</span>
+        <span class="total">$190.00</span>
+      </div>
+    </div>
+    <button class="btn-checkout">
+      Ver Comanda →
     </button>
-  </footer>
-</main>
+  </div>
+
+  <!-- Bottom Navigation -->
+  <nav class="bottom-nav">
+    <a href="#" class="nav-item active">
+      <span class="icon">🧾</span>
+      <span class="label">Comanda</span>
+    </a>
+    <a href="#" class="nav-item">
+      <span class="icon">📋</span>
+      <span class="label">Preparar</span>
+    </a>
+    <a href="#" class="nav-item">
+      <span class="icon">📠</span>
+      <span class="label">Cuenta</span>
+    </a>
+    <a href="#" class="nav-item">
+      <span class="icon">🍳</span>
+      <span class="label">Cocina</span>
+    </a>
+  </nav>
+</div>
     <script src="/script.js"></script>
   </body>
-
 </html>
